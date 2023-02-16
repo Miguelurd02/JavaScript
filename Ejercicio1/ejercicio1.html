@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+          text-align: left;
+        }
+        </style>
+</head>
+
+<body>
+    <center>
+        <h2>Ejercicio 1</h2>
+        <h4>Bienvenido, en esta aplicación se contabiliza y se promedia el peso de los alumnos en función de la siguiente tabla</h4>
+        <h4>Ingresa el peso del alumno para visualizar el rango donde pertenece</h4>
+        <input placeholder="" name="peso" id="peso"/>
+        <button onclick="updateValue()">Ingresar capital</button>
+    </center>
+    <br><br><br>
+    
+    <table>
+        <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Cantidad de alumnos</th>
+                    <th>Peso promedio</th>
+                </tr>
+        </thead>
+        <tr>
+          <th>Alumnos que pesan menos de 40kg</th>
+          <td><p id="menos40">0</p></td>
+          <td><p id="promedio">0</p></td>
+        </tr>
+        <tr>
+            <th>Alumnos que pesan entre 40kg y 50kg</th>
+            <td><p id="mas40">0</p></td>
+            <td><p id="promedio40">0</p></td>
+        </tr>
+        <tr>
+            <th>Alumnos que pesan más de 50kg y menos de 60kg</th>
+            <td><p id="mas50">0</p></td>
+            <td><p id="promedio50">0</p></td>
+        </tr>
+        <tr>
+            <th>Alumnos que pesan igual a 60kg o más</th>
+            <td><p id="igual60">0</p></td>
+            <td><p id="promedio60">0</p></td>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <td><p id="total">0</p></td>
+            <td><p id="promediototal">0</p></td>
+        </tr>
+      </table>
+      <br><br>
+       <center><button onclick="borrar()">Limpiar tabla</button></center>
+      <br><br>
+</body>
+
+<script src="ejercicio1.js"></script>
+</html>

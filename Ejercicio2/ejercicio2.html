@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h2>Ejercicio 2</h2>
+        <h4>Bienvenido, en esta aplicación podrás conocer el saldo de tu cuenta a final de año tomando encuenta lo siguiente</h4>
+        <h4>El interes es de 15% anual, es decir 1.25% mensual y sus ingresos financieros serán de 250$ en periodos mensuales hasta el mes de diciembre</h4>
+        <h4>Ingrese en la siguiente caja de texto su capital inicial</h4>
+        <input placeholder="" name="capital" id="capital"/>
+        <button onclick="calcular()">Ingresar peso</button>
+        <h2 id="resultado"></h2>
+    </center>
+    
+</body>
+<script>
+    
+    const capital = document.querySelector('#capital');
+    const log = document.getElementById('resultado');
+
+    var capitalTotal = 0;
+    var interesAnual = 0.15;
+    var periodos = 12;
+    var años = 1;
+    var ingresoMensual = 250;
+    var parte1 = 0;
+    var parte2 = 0;
+    var potencia = 0;
+
+    function calcular(){
+
+        //formula
+        
+        potencia = Math.pow(1+interesAnual/periodos,periodos*años);
+        parte1 = capital.value*(potencia);
+        parte2 = ingresoMensual*((potencia - 1)/(interesAnual/periodos));
+        capitalTotal = parte1+parte2
+
+        log.textContent = Number(capitalTotal).toFixed(2);
+        
+    }
+
+</script>
+</html>

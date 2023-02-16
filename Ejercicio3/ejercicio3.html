@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+          text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2>Ejercicio 3</h2>
+       <h4>Bienvenido, en este aplicación se calcularan las estadisticas de los alumnos</h4>
+        <h4>segun lo especificado en las siguientes tablas</h4> 
+    </center>
+    
+        <h3>Introduzca los datos del alumno</h3>
+    
+        <label for="">Cedula: </label>
+        <input placeholder="" name="cedula" id="cedula"/>
+        <br><br>
+        <label for="">Nombre: </label>
+        <input placeholder="" name="nombre" id="nombre"/>
+        <br><br>
+        <label for="">Nota de Matematica: </label>
+        <input placeholder="" name="matematica" id="matematica"/>
+        <br><br>
+        <label for="">Nota de Física: </label>
+        <input placeholder="" name="fisica" id="fisica"/>
+        <br><br>
+        <label for="">Nota de Programación: </label>
+        <input placeholder="" name="programacion" id="programacion"/>
+        <br>
+        <h5>Haga click en ingresar datos para su posterior procesamiento</h5>
+        <button onclick="ingresar()">Ingresar datos</button>
+        <br>
+        <h5>Una vez terminado de ingresar datos de los diferentes alumnos, haga click en calcular</h5>
+        <button onclick="calcular()">Calcular</button>
+    
+    <br><br><br><br>
+    <table>
+        <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Matematica</th>
+                    <th>Física</th>
+                    <th>Programación</th>
+                </tr>
+        </thead>
+        <tr>
+          <th>Nota promedio de alumnos en cada materia</th>
+          <td><p id="promedioM">0</p></td>
+          <td><p id="promedioF">0</p></td>
+          <td><p id="promedioP">0</p></td>
+        </tr>
+        <tr>
+            <th>Numero de alumnos aprobados en cada materia</th>
+            <td><p id="aprobadosM">0</p></td>
+            <td><p id="aprobadosF">0</p></td>
+            <td><p id="aprobadosP">0</p></td>
+        </tr>
+        <tr>
+            <th>Numero de alumnos aplazados en cada materia</th>
+            <td><p id="aplazadosM">0</p></td>
+            <td><p id="aplazadosF">0</p></td>
+            <td><p id="aplazadosP">0</p></td>
+        </tr>
+        <tr>
+            <th>Nota máxima de cada materia</th>
+            <td><p id="maximaM">0</p></td>
+            <td><p id="maximaF">0</p></td>
+            <td><p id="maximaP">0</p></td>
+        </tr>
+      </table>
+
+      <br><br><br>
+      <table>
+        <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Todas las materias</th>
+                    <th>Dos materias</th>
+                    <th>Una sola materia</th>
+                    <th>Ninguna</th>
+                </tr>
+        </thead>
+        <tr>
+          <th>Cantidad de alumnos que aprobaron</th>
+          <td><p id="todas">0</p></td>
+          <td><p id="dos">0</p></td>
+          <td><p id="una">0</p></td>
+          <td><p id="ninguna">0</p></td>
+        </tr>
+      </table>
+      <br><br>
+       <center></center>
+      <br><br>
+</body>
+
+<script src="ejercicio3.js"></script>
+</html>
